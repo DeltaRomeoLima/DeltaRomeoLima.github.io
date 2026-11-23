@@ -1,0 +1,174 @@
+/* LD9 - custom.css (nuskaitomas po main.css) */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap");
+
+/* Spalvos ir šriftai (šablonas juos naudoja per var(...)) */
+:root {
+  --default-font: "Inter", sans-serif;
+  --heading-font: "Space Grotesk", sans-serif;
+  --accent-color: #f5a524;
+  --contrast-color: #111111;
+  --nav-hover-color: #f5a524;
+}
+
+/* 2. Šriftai */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  font-weight: 700;
+}
+
+.hero .hero-content h1 {
+  font-size: 3rem;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+h4 {
+  color: #f3e6cc;
+}
+
+p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* 3a. Mygtukai */
+.hero .hero-actions .btn {
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+
+.hero .hero-actions .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(245, 165, 36, 0.4);
+}
+
+.hero .hero-actions .btn:active {
+  transform: scale(0.95);
+}
+
+/* 3b. Nuorodos */
+a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* 4a. Tarpai (About, Resume, Portfolio) */
+.about.section,
+.resume.section,
+.portfolio.section {
+  padding: 90px 0;
+}
+
+.resume .resume-item article {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* 4b. Blokų išvaizda */
+.about .intro-content {
+  padding: 30px;
+  background-color: #16232b;
+  border-left: 4px solid var(--accent-color);
+  border-radius: 12px;
+}
+
+.resume .resume-item article {
+  background-color: #16232b;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio .portfolio-card {
+  border: 1px solid var(--accent-color);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 5. Komponentai: navigacijos juosta ir "į viršų" mygtukas */
+.header {
+  background-color: #0b1419;
+  border-bottom: 2px solid var(--accent-color);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.scroll-top {
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(245, 165, 36, 0.5);
+}
+
+/* Papildoma 1. Sąrašai */
+.tech-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tech-list li::before {
+  content: "▹ ";
+  color: var(--accent-color);
+}
+
+.tech-list ul {
+  list-style: none;
+  font-size: 0.9rem;
+  color: #a9bcc6;
+  border-left: 2px dashed var(--accent-color);
+}
+
+.tech-list ul li::before {
+  content: "– ";
+}
+
+.steps-list {
+  list-style: none;
+  padding-left: 0;
+  counter-reset: step;
+}
+
+.steps-list > li {
+  counter-increment: step;
+}
+
+.steps-list > li::before {
+  content: counter(step) ". ";
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+.steps-list ol {
+  list-style: lower-alpha;
+  font-size: 0.9rem;
+  color: #a9bcc6;
+}
+
+/* Papildoma 2. Lentelė */
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.price-table th,
+.price-table td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #2a3b45;
+}
+
+.price-table th {
+  background-color: var(--accent-color);
+  color: #111111;
+  text-transform: uppercase;
+}
+
+.price-table tr:nth-child(even) {
+  background-color: #1c2b34;
+}
+
+.price-table tr:hover {
+  background-color: #3a3020;
+}
